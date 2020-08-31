@@ -5,6 +5,15 @@ board[1] = 'X'
 def insertLetter(letter, pos):
     board[pos] = letter
 
+def spaceIsFree(pos):
+    return board[pos] == ' '
+
+def isBoardFull(board):
+    if board.count(' ') > 1:
+        return False
+    else:
+        return True
+
 def printBoard(board):
     print('   |   |   ')
     print(' ' + board[1] + ' | ' + board[2] + ' | ' + board[3])
